@@ -9,8 +9,9 @@ const NavBar = (props) => {
                 <NavLink to='/'>Prime Pub Resto</NavLink>
                 
                 <NavIcon onClick={toggle}>
-                   <p>Menu</p>
-                   <Bars />
+                   <p>CART</p>
+                   <Bars /> 
+                   <span>0</span>
                 </NavIcon>
             </Nav>
         </>
