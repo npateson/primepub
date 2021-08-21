@@ -6,12 +6,12 @@ const NavBar = (props) => {
     return ( 
         <>
             <Nav>
-                <NavLink to='/'>Prime Pub Resto</NavLink>
+                <NavLink to='/'>Prime Pub</NavLink>
                 
                 <NavIcon onClick={toggle}>
-                   <p>CART</p>
+                 
                    <Bars /> 
-                   <span>0</span>
+                   <span>CART</span> <strong>0</strong>
                 </NavIcon>
             </Nav>
         </>

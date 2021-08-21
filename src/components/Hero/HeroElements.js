@@ -44,7 +44,7 @@ letter-spacing: 3px;
 `
 
 export const HeroP = styled.p`
-font-size: clamp(2rem, 2.5vw, 3rem);
+font-size: clamp(1.2rem, 2vw, 2rem);
 margin-bottom: 2rem;
 `
 

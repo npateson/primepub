@@ -30,7 +30,40 @@ export const productData = [
             desc: "Lovely fried chicken specially made with the most tasty natural indigenous spices in Cameroon",
             price: "FCFA 3000",
             button: "Add to Cart"
-            }
+            }, {img: product1,
+                alt: "fried-chicken",
+                name: "Fried Chicken",
+                desc: "Lovely fried chicken specially made with the most tasty natural indigenous spices in Cameroon",
+                price: "FCFA 2500",
+                button: "Add to Cart"
+                },
+                {img: product2,
+                    alt: "fried-chicken",
+                    name: "Fried Rice",
+                    desc: "Lovely fried chicken specially made with the most tasty natural indigenous spices in Cameroon",
+                    price: "FCFA 2000",
+                    button: "Add to Cart"
+                    },
+                {img: product3,
+                        alt: "fried-chicken",
+                        name: "Hot-pot",
+                        desc: "Lovely fried chicken specially made with the most tasty natural indigenous spices in Cameroon",
+                        price: "FCFA 3000",
+                        button: "Add to Cart"
+                        }, {img: product1,
+                            alt: "fried-chicken",
+                            name: "Fried Chicken",
+                            desc: "Lovely fried chicken specially made with the most tasty natural indigenous spices in Cameroon",
+                            price: "FCFA 2500",
+                            button: "Add to Cart"
+                            },
+                            {img: product2,
+                                alt: "fried-chicken",
+                                name: "Fried Rice",
+                                desc: "Lovely fried chicken specially made with the most tasty natural indigenous spices in Cameroon",
+                                price: "FCFA 2000",
+                                button: "Add to Cart"
+                                }
 ];
 
 
@@ -55,5 +88,12 @@ export const productDataTwo = [
             desc: "Lovely fried chicken specially made with the most tasty natural indigenous spices in Cameroon",
             price: "FCFA 3000",
             button: "Add to Cart"
-            }
+            },
+            {img: product6,
+                alt: "fried-chicken",
+                name: "Hot-pot",
+                desc: "Lovely fried chicken specially made with the most tasty natural indigenous spices in Cameroon",
+                price: "FCFA 3000",
+                button: "Add to Cart"
+                }
 ];

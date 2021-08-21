@@ -28,25 +28,30 @@ cursor: pointer;
 export const NavIcon = styled.div`
 display: block;
 position: absolute;
-top: 0;
+top: 15px;
 right: 0;
 cursor: pointer;
-color: #fff;
 
-p{
-    transform: translate(-175%, 100%);
-    font-weight: bold;
-    color: #ffc500;
-    margin-right: 0px;
-    // display: inline-block;
-}
 
-span {
+span, strong {
     color: #ffc500;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     display: inline-block;
     transform: translateY(-15px);
-    margin-right: 8px;
+    margin-right: 12px;
+    margin-left: 8px;
+}
+span {
+    margin-right: 0px
+}
+
+@media screen and (max-width:680px) {
+    margin-top: 8px;
+
+    span {
+        display: none;
+    }
+   
 }
 `
 
@@ -56,4 +61,5 @@ transform: translate(-50%, -15%);
 color: #ffc500;
 margin-left: 0
 display: inline-block;
+transform: translateY(-8px);
 `

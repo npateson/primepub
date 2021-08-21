@@ -4,9 +4,9 @@ import {FeatureContainer, FeatureBtn} from './FeatureElements'
 const Feature = () => {
     return ( 
         <FeatureContainer>
-            <h1>Fried Chicken of the Day</h1>
-            <p>Some of the best chicken you will have tasted in a lifetime!</p>
-            <FeatureBtn>Order Now</FeatureBtn>
+            <h1>Book us for your events</h1>
+            <p>Some of the most cozy environment you will find in Yaounde for any event!</p>
+            <FeatureBtn>BOOK NOW</FeatureBtn>
         </FeatureContainer>    );
 }
  

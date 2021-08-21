@@ -19,7 +19,7 @@ background: linear-gradient(to right, rgba(0, 0, 0, 0.7),
  padding: 0 1rem;
 
  h1 {
-     font-size: clamp(3rem, 5vw, 5rem)
+     font-size: clamp(3rem, 3vw, 3rem)
  }
 
  p {
