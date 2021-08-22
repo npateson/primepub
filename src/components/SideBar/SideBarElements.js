@@ -37,14 +37,7 @@ outline: none;
 
 
 export const SideBarMenu = styled.div`
-display: grid;
-grid-template-columns: 1fr;
-grid-template-rows: repeat(3, 80px);
 text-align: center;
-
-@media screen and (max-width: 480px) {
-    grid-template-rows: repeat(3, 60px);
-}
 `
 
 export const SideBarLink = styled(Link)`
@@ -81,6 +74,8 @@ border: none;
 cursor: pointer;
 transition: 0.2s ease-in-out;
 text-decoration: none;
+box-shadow: 0 0 3px black;
+font-weight: bold;
 
 &:hover {
     transition: 0.2s ease-in-out;

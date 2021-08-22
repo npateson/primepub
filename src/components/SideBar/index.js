@@ -1,6 +1,7 @@
 import React from 'react';
 import {SideBarContainer, Icon, CloseIcon, SideBarMenu, SideBarLink, SideBtnWrap, SideBarRoute} from './SideBarElements'
-
+import CartItem from '../CartItem'
+import Total from '../Total'
 
 const SideBar = ({isOpen, toggle}) => {
     return ( 
@@ -9,11 +10,17 @@ const SideBar = ({isOpen, toggle}) => {
                 <CloseIcon onClick={toggle}/>
             </Icon>
             <SideBarMenu>
-                <SideBarLink to="/">Dishes</SideBarLink>
-                <SideBarLink to="/">Drinks</SideBarLink>
+                <CartItem />
+                <CartItem />
+                <CartItem />
+                <CartItem />
+                <CartItem />
+                <Total />
                 <SideBarLink to="/">Snacks</SideBarLink>
             </SideBarMenu>
+            
             <SideBtnWrap>
+           
                 <SideBarRoute to="/">Order Now</SideBarRoute>
             </SideBtnWrap>
         </SideBarContainer>
