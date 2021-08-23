@@ -15,12 +15,12 @@ const SideBar = ({isOpen, toggle}) => {
                 <CartItem />
                 <CartItem />
                 <CartItem />
-                <Total />
+               
                 <SideBarLink to="/">Snacks</SideBarLink>
             </SideBarMenu>
             
             <SideBtnWrap>
-           
+            <Total />
                 <SideBarRoute to="/">Order Now</SideBarRoute>
             </SideBtnWrap>
         </SideBarContainer>

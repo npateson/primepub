@@ -5,7 +5,7 @@ import {FaTimes} from 'react-icons/fa';
 export const SideBarContainer = styled.aside`
 position: fixed;
 z-index: 999;
-width: 350px;
+width: 380px;
 height: 100%;
 background: #ffc500;
 display: grid;
@@ -60,6 +60,8 @@ cursor: pointer;
 
 export const SideBtnWrap = styled.div`
 display: flex;
+flex-direction: column;
+align-items: center;
 justify-content: center;
 `
 

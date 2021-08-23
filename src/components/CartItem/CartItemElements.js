@@ -4,7 +4,7 @@ export const CartItemsWrapper = styled.div`
 display: flex;
 justify-content: space-around;
 padding: 0px 12px;
-margin-bottom: 12px;
+margin-bottom: 15px;
 
 p {
     font-weight: bold;
@@ -14,11 +14,13 @@ i {
     margin: 0px;
 }
 
-b {
+input {
+    width: 18px;
     margin: 0px;
+    font-weight: bold;
     border: 1px solid black;
     border-radius: 2px;
-    padding: 0px 3px;
+    padding: 0px 4px;
     color: #e31837;
     background-color: white;
     box-shadow: 0 0 3px black;

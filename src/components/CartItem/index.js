@@ -3,7 +3,7 @@ import { CartItemsWrapper } from "./CartItemElements";
 const CartItem = () => {
     return ( 
         <CartItemsWrapper>
-        <p>Fried-Rice</p> <span>2500Frs</span> <i>x</i><b>2</b> <strong>5000FCFA</strong>
+        <p>Fried-Rice</p> <span>2500Frs</span> <i>x</i><input type="text" value="2"></input> <strong>5000FCFA</strong>
         <button>-</button><button>+</button><button id="deleteBtn">X</button>
         </CartItemsWrapper>
      );
