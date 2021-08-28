@@ -11,7 +11,7 @@ const NavBar = (props) => {
                 <NavIcon onClick={toggle}>
                  
                    <Bars /> 
-                   <span>CART</span> <strong>0</strong>
+                   <span>CART</span> <strong>3</strong>
                 </NavIcon>
             </Nav>
         </>

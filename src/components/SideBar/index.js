@@ -3,24 +3,27 @@ import {SideBarContainer, Icon, CloseIcon, SideBarMenu, SideBarLink, SideBtnWrap
 import CartItem from '../CartItem'
 import Total from '../Total'
 
-const SideBar = ({isOpen, toggle}) => {
+const SideBar = ({isOpen, toggle, cartArray, setCartArray}) => {
+   
+    let totalArray = [];
+   
+   
     return ( 
         <SideBarContainer isOpen={isOpen}>
             <Icon>
                 <CloseIcon onClick={toggle}/>
             </Icon>
             <SideBarMenu>
-                <CartItem />
-                <CartItem />
-                <CartItem />
-                <CartItem />
-                <CartItem />
+               {cartArray.map((product, index) => {
+                       return <CartItem key={index} index={index} product={product} cartArray={cartArray} setCartArray={setCartArray} totalArray={totalArray}/>
+               })}
+                
                
                 <SideBarLink to="/">Snacks</SideBarLink>
             </SideBarMenu>
             
             <SideBtnWrap>
-            <Total />
+            <Total totalArray={totalArray}/>
                 <SideBarRoute to="/">Order Now</SideBarRoute>
             </SideBtnWrap>
         </SideBarContainer>

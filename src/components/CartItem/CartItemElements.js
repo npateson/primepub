@@ -5,9 +5,12 @@ display: flex;
 justify-content: space-around;
 padding: 0px 12px;
 margin-bottom: 15px;
-
+margin-top: 10px;
 p {
     font-weight: bold;
+    display: inline-block;
+    width: 99px;
+    text-align: left;
 }
 
 i {

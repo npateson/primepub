@@ -24,15 +24,19 @@ color: #000;
 `
 
 export const Icon = styled.div`
-position: absolute;
+// transform: translateY(-90px);
+position: relative;
 // float: right;
-top: 1.2rem;
-right: 1.5rem;
+margin-left: 340px;
+// margin-top: 25px;
+top: 0.5rem;
+bottom: 1.2rem;
+// right: 1.5rem;
 background: transparent;
 border: transparent;
 font-size: 2rem;
 cursor: pointer;
-outline: none;
+// outline: none;
 `
 
 
