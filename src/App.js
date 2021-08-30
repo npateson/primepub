@@ -8,20 +8,19 @@ import Feature from './components/Feature'
 import Footer from './components/Footer'
 
 
-function App(){
 
-	const [cartArray, setCartArray] = useState([]);
+function App(){
     const StoredArray = ""
+	const [cartArray, setCartArray] = useState([]);
+   
 
     useEffect(()=>{
-		// let retrievedArray = localStorage.getItem(JSON.parse(StoredArray));
-		// setCartArray(retrievedArray);
-		// console.log(retrievedArray);
+		let retrievedArray = JSON.parse(localStorage.getItem(StoredArray));
+		setCartArray(retrievedArray);
 	}, []);
  
 	useEffect(()=>{
 		localStorage.setItem(StoredArray, JSON.stringify(cartArray));
-		console.log(StoredArray)
 	}, [cartArray]);
 
  return (

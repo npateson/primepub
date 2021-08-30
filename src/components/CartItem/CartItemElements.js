@@ -9,7 +9,7 @@ margin-top: 10px;
 p {
     font-weight: bold;
     display: inline-block;
-    width: 99px;
+    width: 105px;
     text-align: left;
 }
 
@@ -46,6 +46,4 @@ button {
     background-color: #e31837;
     color: #fff;
 }
-
-
 `
