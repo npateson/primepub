@@ -14,6 +14,11 @@ background-color: black;
 @media screen and (max-width: 800px) {
     // width: 100vw;
     height: 65vh;
+    padding: 10px 0px;
+}
+@media screen and (max-width: 600px) {
+    // width: 100vw;
+    height: 48vh;
     padding: 10px;
 }
 
@@ -25,7 +30,7 @@ h2 {
     // position: absolute;
 
 @media screen and (max-width: 800px) {
-   font-size: 1.1rem;
+   font-size: 0.9rem;
 }
 }
 `
@@ -38,10 +43,15 @@ object-fit: cover;
 margin: 10px auto 40px;
 
 @media screen and (max-width: 800px) {
-    width: 85vw;
+    width: 95vw;
     height: 60vh;
     padding: 10px 0px;
     border-radius: 20px;
+}
+@media screen and (max-width: 600px) {
+    // width: 100vw;
+    height: 45vh;
+    padding: 10px;
 }
 `
 export const RightArrow = styled(FaArrowAltCircleRight)`
