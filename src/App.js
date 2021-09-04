@@ -6,6 +6,7 @@ import Products from './components/Products'
 import {productData, productDataTwo} from './components/Products/data'
 import Feature from './components/Feature'
 import Footer from './components/Footer'
+import ImageSlider from './components/ImageSlider'
 
 
 
@@ -30,6 +31,7 @@ function App(){
          <Hero cartArray={cartArray} setCartArray={setCartArray}/>
 		 <Products heading="Our Delicacies" data={productData} cartArray={cartArray} setCartArray={setCartArray}/>
 		 <Products heading="Our Sumptuous Traditional Meals" data={productDataTwo}cartArray={cartArray} setCartArray={setCartArray}/>
+		 <ImageSlider />
 		 <Feature />
 		 <Footer />
 	 </Router>
