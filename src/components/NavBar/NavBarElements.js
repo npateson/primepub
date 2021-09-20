@@ -31,6 +31,7 @@ position: absolute;
 top: 15px;
 right: 0;
 cursor: pointer;
+position: fixed;
 
 
 span, strong {
