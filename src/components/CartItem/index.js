@@ -1,21 +1,23 @@
 import { CartItemsWrapper } from "./CartItemElements";
 import {useState} from 'react'
 
-const CartItem = ({product, index, cartArray, setCartArray, totalArray}) => {
+const CartItem = ({product, index, cartArray, setCartArray, totalArray, setTotalArray}) => {
     const [count, setCount] = useState(1);
-      totalArray.push(product.price*count);
-      console.log(`totalArray1 is ${totalArray}`)
+    
+
     const handleDelete = (i) => {
-        // console.log(cartArray)
         let newArr = [...cartArray];
         newArr.splice(i, 1);
         console.log(newArr)
         setCartArray(newArr);
+      
     };
     const handleIncrement = () => {
         setCount(prev=>prev+1);
-        // totalArray.push(price);
-        // console.log(`totalArray2 is ${totalArray}`)
+        const newArrs = [...totalArray];
+        newArrs.push(count*product.price);
+        setTotalArray(newArrs);
+        console.log(`This is the new ${totalArray}`)
     };
 
     return ( 

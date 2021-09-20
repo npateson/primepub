@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {SideBarContainer, Icon, CloseIcon, SideBarMenu, SideBarLink, SideBtnWrap, SideBarRoute} from './SideBarElements'
 import CartItem from '../CartItem'
 import Total from '../Total'
 
 const SideBar = ({isOpen, toggle, cartArray, setCartArray}) => {
    
-    let totalArray = [];
+    let [totalArray, setTotalArray] = useState([]);
    
    
     return ( 
@@ -15,7 +15,7 @@ const SideBar = ({isOpen, toggle, cartArray, setCartArray}) => {
             </Icon>
             <SideBarMenu>
                {cartArray.map((product, index) => {
-                       return <CartItem key={index} index={index} product={product} cartArray={cartArray} setCartArray={setCartArray} totalArray={totalArray}/>
+                       return <CartItem key={index} index={index} product={product} cartArray={cartArray} setCartArray={setCartArray} totalArray={totalArray} setTotalArray={setTotalArray}/>
                })}
                 
                

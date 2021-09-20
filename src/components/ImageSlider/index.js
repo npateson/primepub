@@ -30,7 +30,7 @@ const ImageSlider = () => {
            {
               
                sliderData.map((slide, index)=> {
-                //    slide.id={index}
+                   slide.id={index}
                 
                    return  (
                     <div className={index === current? 'slide active' : 'slide'}>
