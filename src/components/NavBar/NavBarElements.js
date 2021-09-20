@@ -63,4 +63,5 @@ color: #ffc500;
 margin-left: 0
 display: inline-block;
 transform: translateY(-8px);
+z-index: 99999;
 `

@@ -7,6 +7,7 @@ import {productData, productDataTwo} from './components/Products/data'
 import Feature from './components/Feature'
 import Footer from './components/Footer'
 import ImageSlider from './components/ImageSlider'
+import YoutubeEmbed from './components/YoutubeEmbed';
 
 
 
@@ -32,6 +33,7 @@ function App(){
 		 <Products heading="Our Delicacies" data={productData} cartArray={cartArray} setCartArray={setCartArray}/>
 		 <Products heading="Our Sumptuous Traditional Meals" data={productDataTwo}cartArray={cartArray} setCartArray={setCartArray}/>
 		 <ImageSlider />
+		 <YoutubeEmbed />
 		 <Feature />
 		 <Footer />
 	 </Router>
