@@ -3,6 +3,7 @@ import {Nav, NavLink, NavIcon, Bars} from './NavBarElements'
 
 const NavBar = (props) => {
     const toggle = props.toggle;
+    const cartNum = props.cartArray;
     return ( 
         <>
             <Nav>
@@ -11,7 +12,7 @@ const NavBar = (props) => {
                 <NavIcon onClick={toggle}>
                  
                    <Bars /> 
-                   <span>CART</span> <strong>3</strong>
+                   <span>CART</span> <strong>{cartNum.length}</strong>
                 </NavIcon>
             </Nav>
         </>

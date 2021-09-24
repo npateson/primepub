@@ -16,64 +16,75 @@ import product17 from '../../images/pp17.jpg'
 import product19 from '../../images/achu.jpg'
 import product20 from '../../images/pp20.jpg'
 import product21 from '../../images/pp21.jpg'
+import { useState } from 'react'
 
 
 
 
-export const productData = [
+
+
+export let productData = [
     {img: product1,
     alt: "fried-chicken",
     name: "Fried Chicken",
     desc: "Lovely fried chicken specially made with the most tasty natural indigenous spices in Cameroon",
     price: 2500,
-    button: "Add to Cart"
+    button: "Add to Cart",
+    isClicked: false
     },
     {img: product2,
         alt: "fried-chicken",
         name: "Roast Fish",
         desc: "Lovely fried chicken specially made with the most tasty natural indigenous spices in Cameroon",
         price: 2000,
-        button: "Add to Cart"
+        button: "Add to Cart",
+        isClicked: false
         },
     {img: product3,
             alt: "fried-chicken",
             name: "Fried Rice",
             desc: "Lovely fried chicken specially made with the most tasty natural indigenous spices in Cameroon",
             price: 3000,
-            button: "Add to Cart"
+            button: "Add to Cart",
+            isClicked: false
             }, {img: product13,
                 alt: "fried-chicken",
                 name: "French Fries",
                 desc: "Lovely fried chicken specially made with the most tasty natural indigenous spices in Cameroon",
                 price: 2500,
-                button: "Add to Cart"
+                button: "Add to Cart",
+                isClicked: false
                 },
                 {img: product14,
                     alt: "fried-chicken",
                     name: "Rice Mounts",
                     desc: "Lovely fried chicken specially made with the most tasty natural indigenous spices in Cameroon",
                     price: 2000,
-                    button: "Add to Cart"
+                    button: "Add to Cart",
+                    isClicked: false
                     },
                 {img: product11,
                         alt: "fried-chicken",
                         name: "Chopped Steak",
                         desc: "Lovely fried chicken specially made with the most tasty natural indigenous spices in Cameroon",
                         price: 3000,
-                        button: "Add to Cart"
+                        button: "Add to Cart",
+                        isClicked: false
                         }, {img: product10,
                             alt: "fried-chicken",
                             name: "Senegalese ",
                             desc: "Lovely fried chicken specially made with the most tasty natural indigenous spices in Cameroon",
                             price: 2500,
-                            button: "Add to Cart"
+                            button: "Add to Cart",
+                            isClicked: false
                             },
                             {img: product12,
                                 alt: "fried-chicken",
                                 name: "Hot-Pot",
                                 desc: "Lovely fried chicken specially made with the most tasty natural indigenous spices in Cameroon",
                                 price: 3000,
-                                button: "Add to Cart"
+                                button: "Add to Cart",
+                                isClicked: false
                                 }
 ];
 
@@ -84,27 +95,31 @@ export const productDataTwo = [
     name: "Ndole Plantain",
     desc: "Lovely fried chicken specially made with the most tasty natural indigenous spices in Cameroon",
     price:  2500,
-    button: "Add to Cart"
+    button: "Add to Cart",
+    isClicked: false
     },
     {img: product19,
         alt: "fried-chicken",
         name: "Achu",
         desc: "Lovely fried chicken specially made with the most tasty natural indigenous spices in Cameroon",
         price:  2000,
-        button: "Add to Cart"
+        button: "Add to Cart",
+        isClicked: false
         },
     {img: product17,
             alt: "fried-chicken",
             name: "Kati-Kati",
             desc: "Lovely fried chicken specially made with the most tasty natural indigenous spices in Cameroon",
             price:  2000,
-            button: "Add to Cart"
+            button: "Add to Cart",
+            isClicked: false
             },
     {img: product21,
                 alt: "fried-chicken",
                 name: "Garri & Eru",
                 desc: "Lovely fried chicken specially made with the most tasty natural indigenous spices in Cameroon",
                 price:  1500,
-                button: "Add to Cart"
+                button: "Add to Cart",
+                isClicked: false
                 }
 ];

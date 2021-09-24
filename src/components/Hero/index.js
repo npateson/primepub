@@ -12,7 +12,7 @@ const Hero = ({cartArray, setCartArray}) => {
 
     return ( 
         <HeroContainer>
-           <NavBar toggle={toggle}/>
+           <NavBar toggle={toggle} cartArray={cartArray}/>
            <SideBar isOpen={isOpen} toggle={toggle} cartArray={cartArray} setCartArray={setCartArray}/>
            <HeroContent>
                <HeroItems>

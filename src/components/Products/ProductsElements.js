@@ -74,7 +74,7 @@ color: #fff;
 transition: 0.2 ease-out;
 
 &:hover {
-    background: #ffc500;
+    background: #FF7600;
     transition: 0.2s ease-out;
     cursor: pointer;
     color: #000;

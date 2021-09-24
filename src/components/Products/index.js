@@ -10,19 +10,17 @@ import {
     ProductPrice,
     ProductBtn
 } from './ProductsElements'
-import React from 'react'
+import React,{useState} from 'react'
 
 
 const Products = ({heading, data, cartArray, setCartArray}) => {
+
+
     const handleClick = (product) => {
        
+        // cartArray.include(product) ? setCartArray(cartArray => [...cartArray]) : setCartArray(cartArray => [...cartArray, product]);
+        product.isClicked = true;
         setCartArray(cartArray => [...cartArray, product]);
-        // console.log(`Products cartArray is ${cartArray}`)
-        // const newArr = [...cartArray, {product}];
-        // cartArray=newArr;
-        // setCartArray(newArr)
-        // console.log(`Products cartArray is ${cartArray}`)
-    //   console.log(cartArray);
     }
     return ( 
         <ProductsContainer>
@@ -37,7 +35,8 @@ const Products = ({heading, data, cartArray, setCartArray}) => {
                                 <ProductTitle>{product.name}</ProductTitle>
                                 <ProductDescription>{product.desc}</ProductDescription>
                                 <ProductPrice><b>FCFA {product.price}</b></ProductPrice>
-                                <ProductBtn  onClick={()=> handleClick(product)}>{product.button}</ProductBtn>
+                              { product.isClicked || cartArray.includes(product)?  <ProductBtn  onClick={()=> alert("This product is already in your cart")} style={{backgroundColor: '#fdc500'}}>Added to Cart</ProductBtn>:
+                              <ProductBtn  onClick={()=> handleClick(product)}>{product.button}</ProductBtn> }
                             </ProductInfo>
                         </ProductCard>
                     )

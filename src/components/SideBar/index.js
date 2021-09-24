@@ -4,8 +4,9 @@ import CartItem from '../CartItem'
 import Total from '../Total'
 
 const SideBar = ({isOpen, toggle, cartArray, setCartArray}) => {
+    const [totalArray, setTotalArray] = useState([]);
    
-    let [totalArray, setTotalArray] = useState([]);
+    
    
    
     return ( 
@@ -15,6 +16,7 @@ const SideBar = ({isOpen, toggle, cartArray, setCartArray}) => {
             </Icon>
             <SideBarMenu>
                {cartArray.map((product, index) => {
+                          
                        return <CartItem key={index} index={index} product={product} cartArray={cartArray} setCartArray={setCartArray} totalArray={totalArray} setTotalArray={setTotalArray}/>
                })}
                 
@@ -23,11 +25,11 @@ const SideBar = ({isOpen, toggle, cartArray, setCartArray}) => {
             </SideBarMenu>
             
             <SideBtnWrap>
-            <Total totalArray={totalArray}/>
+            <Total cartArray={cartArray} />
                 <SideBarRoute to="/">Order Now</SideBarRoute>
             </SideBtnWrap>
         </SideBarContainer>
      );
 }
- 
+
 export default SideBar;

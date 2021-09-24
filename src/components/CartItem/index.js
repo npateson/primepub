@@ -1,31 +1,46 @@
 import { CartItemsWrapper } from "./CartItemElements";
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 const CartItem = ({product, index, cartArray, setCartArray, totalArray, setTotalArray}) => {
-    const [count, setCount] = useState(1);
-    
 
-    const handleDelete = (i) => {
+    const [count, setCount] = useState(1)
+    
+     // Adding a count property to product which will be used to calculate the total cost in Total.js
+    product.pcount={count};
+  
+    const handleDelete = (p, i) => {
         let newArr = [...cartArray];
         newArr.splice(i, 1);
-        console.log(newArr)
         setCartArray(newArr);
+        p.isClicked = false;
       
     };
     const handleIncrement = () => {
         setCount(prev=>prev+1);
-        const newArrs = [...totalArray];
-        newArrs.push(count*product.price);
-        setTotalArray(newArrs);
-        console.log(`This is the new ${totalArray}`)
     };
 
+    const handleDecrement = () => {
+        setCount(prev=>prev-1)
+    }
+
+    const handleChange = (e) => {
+        const newCount = e.target.value;
+        setCount(newCount);
+        
+    }
+    
+
+    
+
+    
     return ( 
         <CartItemsWrapper>
-        <p>{product.name}</p> <span>FCFA{product.price}</span> <i>x</i><input type="text" value={count} onChange={(e)=>setCount(e.target.value)}></input> <strong>{product.price*count}<b>Frs</b></strong>
-        <button onClick={() => setCount(prev=>prev-1)}>-</button><button onClick={()=>handleIncrement(product.price)}>+</button><button onClick={()=>handleDelete(index)} id="deleteBtn">X</button>
+        <p>{product.name}</p> <span>FCFA{product.price}</span> <i>x</i><input type="text" value={count} onChange={handleChange}></input> <strong>{product.price*count}<b>Frs</b></strong>
+    <button onClick={handleDecrement}>-</button><button onClick={handleIncrement}>+</button><button onClick={()=>handleDelete(product, index)} id="deleteBtn">X</button>
         </CartItemsWrapper>
      );
+
+
 }
  
 export default CartItem;

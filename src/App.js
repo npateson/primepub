@@ -10,9 +10,9 @@ import ImageSlider from './components/ImageSlider'
 import YoutubeEmbed from './components/YoutubeEmbed';
 
 
-
 function App(){
-    const StoredArray = ""
+    const StoredArray = "";
+	const StoredProduct = ""
 	const [cartArray, setCartArray] = useState([]);
    
 
@@ -25,13 +25,22 @@ function App(){
 		localStorage.setItem(StoredArray, JSON.stringify(cartArray));
 	}, [cartArray]);
 
+	//  useEffect(()=>{
+	// 	let retrievedProduct = JSON.parse(localStorage.getItem(StoredProduct));
+	// 	setProductD(retrievedProduct);
+	// }, []);
+ 
+	// useEffect(()=>{
+	// 	localStorage.setItem(StoredProduct, JSON.stringify(productD));
+	// }, [productD]);
+
  return (
 	 <Router>
 		 <GlobalStyle />
 		 
          <Hero cartArray={cartArray} setCartArray={setCartArray}/>
 		 <Products heading="Our Delicacies" data={productData} cartArray={cartArray} setCartArray={setCartArray}/>
-		 <Products heading="Our Sumptuous Traditional Meals" data={productDataTwo}cartArray={cartArray} setCartArray={setCartArray}/>
+		 <Products heading="Our Sumptuous Traditional Meals" data={productDataTwo} cartArray={cartArray} setCartArray={setCartArray}/>
 		 <ImageSlider />
 		 <YoutubeEmbed />
 		 <Feature />
