@@ -7,6 +7,7 @@ const CartItem = ({product, index, cartArray, setCartArray, totalArray, setTotal
     
      // Adding a count property to product which will be used to calculate the total cost in Total.js
     product.pcount={count};
+    // totalArray.push()
   
     const handleDelete = (p, i) => {
         let newArr = [...cartArray];
@@ -20,7 +21,8 @@ const CartItem = ({product, index, cartArray, setCartArray, totalArray, setTotal
     };
 
     const handleDecrement = () => {
-        setCount(prev=>prev-1)
+        setCount(prev=>prev-1);
+        // setTotalArray(prev => prev)
     }
 
     const handleChange = (e) => {

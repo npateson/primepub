@@ -25,7 +25,7 @@ const SideBar = ({isOpen, toggle, cartArray, setCartArray}) => {
             </SideBarMenu>
             
             <SideBtnWrap>
-            <Total cartArray={cartArray} />
+            <Total cartArray={cartArray} totalArray={totalArray} setTotalArray={setTotalArray}/>
                 <SideBarRoute to="/">Order Now</SideBarRoute>
             </SideBtnWrap>
         </SideBarContainer>
