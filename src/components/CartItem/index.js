@@ -18,11 +18,15 @@ const CartItem = ({product, index, cartArray, setCartArray, totalArray, setTotal
     };
     const handleIncrement = () => {
         setCount(prev=>prev+1);
+        // const newArr = [...cartArray]
+        setCartArray(prev => [...prev]);
     };
 
     const handleDecrement = () => {
         setCount(prev=>prev-1);
-        // setTotalArray(prev => prev)
+       
+        // setCartArray(prev => prev);
+        setCartArray(prev => [...prev]);
     }
 
     const handleChange = (e) => {
