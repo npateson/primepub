@@ -29,6 +29,17 @@ input {
     box-shadow: 0 0 3px black;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
 
 button {
     height:18px;
@@ -45,5 +56,14 @@ button {
 #deleteBtn {
     background-color: #e31837;
     color: #fff;
+}
+
+span {
+    font-size: 1rem;
+
+    i {
+        font-size: 0.6rem;
+        font-weight: bold;
+    }
 }
 `

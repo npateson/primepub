@@ -43,7 +43,7 @@ const CartItem = ({product, index, cartArray, setCartArray, totalArray, setTotal
     
     return ( 
         <CartItemsWrapper>
-        <p>{product.name}</p> <span>FCFA{product.price}</span> <i>x</i><input type="number" min="1" max="9" value={count} onChange={handleChange}></input> <strong>{product.price*count}<b>Frs</b></strong>
+        <p>{product.name}</p> <span><i>FCFA</i>{product.price}</span> <i>x</i><input type="number" min="1" max="9" value={count} onChange={handleChange}></input> <strong>{product.price*count}<b>Frs</b></strong>
     <button onClick={handleDecrement}>-</button><button onClick={handleIncrement}>+</button><button onClick={()=>handleDelete(product, index)} id="deleteBtn">X</button>
         </CartItemsWrapper>
      );
