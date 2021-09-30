@@ -18,12 +18,13 @@ const CartItem = ({product, index, cartArray, setCartArray, totalArray, setTotal
     };
     const handleIncrement = () => {
         setCount(prev=>prev+1);
-        // const newArr = [...cartArray]
-        setCartArray(prev => [...prev]);
+
+        const newArr = [...cartArray]
+        setCartArray(newArr);
     };
 
     const handleDecrement = () => {
-        setCount(prev=>prev-1);
+       if (count > 1) setCount(prev=>prev-1);
        
         // setCartArray(prev => prev);
         setCartArray(prev => [...prev]);
@@ -32,6 +33,7 @@ const CartItem = ({product, index, cartArray, setCartArray, totalArray, setTotal
     const handleChange = (e) => {
         const newCount = e.target.value;
         setCount(newCount);
+        setCartArray(prev => [...prev]);
         
     }
     
@@ -41,7 +43,7 @@ const CartItem = ({product, index, cartArray, setCartArray, totalArray, setTotal
     
     return ( 
         <CartItemsWrapper>
-        <p>{product.name}</p> <span>FCFA{product.price}</span> <i>x</i><input type="text" value={count} onChange={handleChange}></input> <strong>{product.price*count}<b>Frs</b></strong>
+        <p>{product.name}</p> <span>FCFA{product.price}</span> <i>x</i><input type="number" min="1" max="9" value={count} onChange={handleChange}></input> <strong>{product.price*count}<b>Frs</b></strong>
     <button onClick={handleDecrement}>-</button><button onClick={handleIncrement}>+</button><button onClick={()=>handleDelete(product, index)} id="deleteBtn">X</button>
         </CartItemsWrapper>
      );

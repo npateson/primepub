@@ -89,3 +89,25 @@ font-weight: bold;
     color: #010606;
 }
 `
+
+export const ClearCartBtn = styled.button`
+background: #000;
+white-space: nowrap;
+padding: 16px 64px;
+color: #fff;
+font-size: 16px;
+outline: none;
+border: none;
+cursor: pointer;
+transition: 0.2s ease-in-out;
+text-decoration: none;
+box-shadow: 0 0 3px black;
+font-weight: bold;
+margin-top: 10px;
+
+&:hover {
+    transition: 0.2s ease-in-out;
+    background: #fff;
+    color: #010606;
+}
+`
