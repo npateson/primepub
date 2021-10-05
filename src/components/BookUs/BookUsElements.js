@@ -4,7 +4,7 @@ import {FaTimes} from 'react-icons/fa';
 
 export const SideBarContainer = styled.aside`
 position: fixed;
-z-index: 9999999;
+z-index: 99999;
 width: 380px;
 height: 100%;
 background: #ffc500;
@@ -13,7 +13,7 @@ align-items: center;
 top: 0;
 transition: 0.3s ease-in-out;
 // right: 0px;
-right: ${({isSubmit}) => (isSubmit ? "0px" : "-1000px")};
+right: ${({isBooked}) => (isBooked ? "0px" : "-1000px")};
 
 @media screen and (max-width: 400px) {
     width: 100%;
@@ -47,8 +47,8 @@ text-align: center;
 label {
     display: block;
     font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 0px;
+    font-size: 1rem;
+    margin-bottom: 1px;
 }
 
 input {
@@ -56,11 +56,11 @@ input {
     padding: 5px;
     font-size: 1rem;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     box-shadow: 0 0 3px black;
 }
 
-input::-webkit-outer-spin-button,
+#phone input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
@@ -76,7 +76,7 @@ textarea {
     padding: 5px;
     font-size: 1rem;
     border-radius: 5px;
-    margin-bottom: 20px;
+    // margin-bottom: 5px;
     box-shadow: 0 0 3px black;
 }
 `

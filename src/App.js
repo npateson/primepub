@@ -8,12 +8,16 @@ import Feature from './components/Feature'
 import Footer from './components/Footer'
 import ImageSlider from './components/ImageSlider'
 import YoutubeEmbed from './components/YoutubeEmbed';
+import BookUs from './components/BookUs'
 
 
 function App(){
     const StoredArray = "";
 	const StoredProduct = ""
 	const [cartArray, setCartArray] = useState([]);
+	const [isThank, setIsThank] = useState(false);
+    const [isBooked, setIsBooked] = useState(false);
+
    
 
     useEffect(()=>{
@@ -36,14 +40,13 @@ function App(){
 
  return (
 	 <Router>
-		 <GlobalStyle />
-		 
-         <Hero cartArray={cartArray} setCartArray={setCartArray}/>
+		 <GlobalStyle />		 
+         <Hero cartArray={cartArray} setCartArray={setCartArray} isThank={isThank} setIsThank={setIsThank} isBooked={isBooked} setIsBooked={setIsBooked}/>
 		 <Products heading="Our Delicacies" data={productData} cartArray={cartArray} setCartArray={setCartArray}/>
 		 <Products heading="Our Sumptuous Traditional Meals" data={productDataTwo} cartArray={cartArray} setCartArray={setCartArray}/>
 		 <ImageSlider />
-		 {/* <YoutubeEmbed /> */}
-		 <Feature />
+		 <YoutubeEmbed />
+		 <Feature isThank={isThank} setIsThank={setIsThank} isBooked={isBooked} setIsBooked={setIsBooked}/>
 		 <Footer />
 	 </Router>
  )
